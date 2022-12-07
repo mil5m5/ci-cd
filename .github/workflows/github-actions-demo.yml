@@ -5,7 +5,16 @@ on:
     branches:
       - master
 jobs:
-  Explore-GitHub-Actions:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - run: git pull origin master
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: m114392.hostde30.fornex.host
+          username: m114392
+          password: ${{ secrets.ftp_password }}
