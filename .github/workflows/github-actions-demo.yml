@@ -9,12 +9,5 @@ jobs:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v2
-
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
-        with:
-          server: m114392.hostde30.fornex.host
-          username: m114392
-          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: 🚚 Pass
+        run: ${{ secrets.GITHUB_TOKEN }}
