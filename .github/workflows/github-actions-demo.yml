@@ -12,12 +12,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@master
 
-      - name: Download
-        uses: actions/download-artifact@main
-        with:
-          name: dist
-          path: dist
-
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
