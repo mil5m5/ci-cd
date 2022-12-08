@@ -9,7 +9,5 @@ jobs:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Pass
-        run: ${{ secrets.GITHUB_TOKEN }}
-      
-      
+      - name: 🚚 Pass      
+        uses: checkout@v1
